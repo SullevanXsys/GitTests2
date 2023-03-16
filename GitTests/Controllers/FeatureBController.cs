@@ -8,7 +8,7 @@ namespace GitTests.Controllers
     {
         private static readonly string[] Summaries = new[]
         {
-            "Bracing", "Chilly", "Cool", "Warm", "Balmy", "Hot", "Sweltering"
+            "Bracing", "Chilly", "Cool", "Warm", "Balmy", "Hot", "Sweltering", "FeatureD"
         };
 
         private readonly ILogger<FeatureBController> _logger;
