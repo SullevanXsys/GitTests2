@@ -21,6 +21,7 @@ namespace GitTests.Controllers
         [HttpGet(Name = "GetFeatureF")]
         public IEnumerable<WeatherForecast> GetFeatureF()
         {
+            var featureI = "featureI";
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
@@ -33,13 +34,13 @@ namespace GitTests.Controllers
         [HttpGet(Name = "GetFeatureB")]
         public IEnumerable<WeatherForecast> GetFeatureB()
         {
-            string featureH = "Feature/H";
+            string featureHotfixB = "Feature/I";
 
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = featureG
+                Summary = featureHotfixB
             })
             .ToArray();
         }
