@@ -18,14 +18,28 @@ namespace GitTests.Controllers
             _logger = logger;
         }
 
-        [HttpGet(Name = "GetFeatureB")]
-        public IEnumerable<WeatherForecast> GetFeatureB()
+        [HttpGet(Name = "GetFeatureF")]
+        public IEnumerable<WeatherForecast> GetFeatureF()
         {
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = Random.Shared.Next(-20, 55),
                 Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+            })
+            .ToArray();
+        }
+
+        [HttpGet(Name = "GetFeatureB")]
+        public IEnumerable<WeatherForecast> GetFeatureB()
+        {
+            string featureF = "Feature/F";
+
+            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            {
+                Date = DateTime.Now.AddDays(index),
+                TemperatureC = Random.Shared.Next(-20, 55),
+                Summary = featureF
             })
             .ToArray();
         }
