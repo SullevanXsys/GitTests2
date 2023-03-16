@@ -39,7 +39,7 @@ namespace GitTests.Controllers
             {
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = featureH
+                Summary = featureG
             })
             .ToArray();
         }
