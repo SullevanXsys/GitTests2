@@ -33,7 +33,7 @@ namespace GitTests.Controllers
         [HttpGet(Name = "GetFeatureB")]
         public IEnumerable<WeatherForecast> GetFeatureB()
         {
-            string featureG = "Feature/G";
+            string featureH = "Feature/H";
 
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
